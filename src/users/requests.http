@@ -1,0 +1,41 @@
+### create a new user
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+  "email" : "asdf7@gmail.com",
+  "password" : "1234!@ASEase"
+}
+### sign in a user
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "email" : "asdf7@gmail.com",
+  "password" : "1234!@ASEase"
+}
+
+### sign a user out 
+POST http://localhost:3000/auth/signout
+
+### get current users details using the stored session cookie
+GET http://localhost:3000/auth/whoami
+
+### find a particular user with an id 1
+GET http://localhost:3000/auth/6
+
+### find all users with a specific email
+GET http://localhost:3000/auth?email=asdf4@gmail.com
+
+
+### delete a user with a given id
+DELETE http://localhost:3000/auth/5
+
+### update user attributes
+
+PATCH  http://localhost:3000/auth/6
+content-type: application/json
+
+{
+  "password" : "1234!@ASEaseaaaaa"
+}
