@@ -15,7 +15,6 @@ export class UsersService {
       });
       return this.repo.save(user);
     } catch (e) {
-      console.log(e);
       return e;
     }
   }

@@ -16,7 +16,7 @@ interface Class<T> {
 export function serialize<T>(dto: Class<T>) {
   return UseInterceptors(new SerializeInterceptor(dto));
 }
-export class SerializeInterceptor implements NestInterceptor {
+class SerializeInterceptor implements NestInterceptor {
   constructor(private dto: any) {}
   intercept(
     context: ExecutionContext,
